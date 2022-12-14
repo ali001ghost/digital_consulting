@@ -34,6 +34,10 @@ class User extends Authenticatable
         return $this->hasMany(Costumer_date::class);
     }
 
+    public function consulting_expert()
+    {
+        return $this->belongsToMany(Exp_Consulting::class);
+    }
     /**
      * The attributes that should be hidden for serialization.
      *

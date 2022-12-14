@@ -15,6 +15,7 @@ class CreateConsultingsTable extends Migration
     {
         Schema::create('consultings', function (Blueprint $table) {
             $table->id();
+        
             $table->string('Consulting_name');
             $table->string('Other_Consulting');
             $table->timestamps();

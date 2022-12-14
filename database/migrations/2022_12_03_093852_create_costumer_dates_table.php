@@ -15,9 +15,9 @@ class CreateCostumerDatesTable extends Migration
     {
         Schema::create('costumer_dates', function (Blueprint $table) {
             $table->id();
-            $table->string('user_id');
-            $table->string('Exp_days_id');
-            $table->string('hour');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            // $table->foreignId('exp_id')->constrained('exp_days')->cascadeOnDelete();
+            $table->integer('hour');
             $table->timestamps();
         });
     }

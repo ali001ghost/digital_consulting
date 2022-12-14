@@ -16,10 +16,9 @@ class CreateExpDaysTable extends Migration
         Schema::create('exp__days', function (Blueprint $table) {
             $table->id();
             $table->enum('day',['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']);
-            $table->string('user_id');
-            $table->string('Days_id');
-            $table->string('From_hour');
-            $table->string('To_hour');
+            $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
+            $table->integer('From_hour');
+            $table->integer('To_hour');
             $table->timestamps();
         });
     }

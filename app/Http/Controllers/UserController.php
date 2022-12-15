@@ -18,5 +18,5 @@ class UserController extends Controller
             'address_id' => $request->address_id,
             'password' => $request->password,
  ]);
-    }
+        return 1;   }
 }

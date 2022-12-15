@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Experince extends Model
 {
+    protected $fillable = ['name','description'];
     use HasFactory;
 
-    public function User()
+    public function user()
     {
 
         return $this->belongsTo(User::class);

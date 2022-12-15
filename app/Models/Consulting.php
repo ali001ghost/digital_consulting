@@ -10,8 +10,8 @@ class Consulting extends Model
     use HasFactory;
     protected $fillable=['Consulting_name','Other_consulting'];
 
-    public function consulting_expert()
+    public function consultingExpert()
     {
-        return $this->belongsToMany(Exp_Consulting::class);
+        return $this->belongsToMany(ExpConsulting::class);
     }
 }

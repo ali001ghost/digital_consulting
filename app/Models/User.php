@@ -31,7 +31,7 @@ class User extends Authenticatable
 
     public function costumer_date()
     {
-        return $this->hasMany(Costumer_date::class);
+        return $this->hasMany(UserDate::class);
     }
 
     public function consulting_expert()

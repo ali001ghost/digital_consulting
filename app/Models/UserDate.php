@@ -9,8 +9,6 @@ class UserDate extends Model
 {
     use HasFactory;
 
-
-
     public function user()
     {
 

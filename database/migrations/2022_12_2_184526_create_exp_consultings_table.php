@@ -17,6 +17,7 @@ class CreateExpConsultingsTable extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->cascadeOnDelete();
             $table->foreignId('Consultings_id')->constrained('Consultings')->cascadeOnDelete();
+            $table->integer('price');
             $table->timestamps();
         });
     }

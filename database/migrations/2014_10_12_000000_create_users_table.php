@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->integer('bag');
             $table->string('photo');
             $table->integer('phone');
-            $table->string('address_id');
+        
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();

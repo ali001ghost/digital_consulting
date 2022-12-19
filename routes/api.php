@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\ConsultingController;
+use App\Http\Controllers\ExperinceController;
+use App\Models\Experince;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
@@ -24,3 +27,5 @@ Route::group(['middleware' => 'auth'], function () {
 
 });
   Route::post('user', [UserController::class, 'store']);
+  Route::post('consulting', [ConsultingController::class, 'store']);
+  Route::post('experince', [ExperinceController::class, 'store']);

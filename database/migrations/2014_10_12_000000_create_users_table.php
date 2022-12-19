@@ -17,8 +17,8 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->enum('role',['Costumer','Expert']);
             $table->string('name');
-            $table->integer('bag');
-            $table->string('photo');
+            $table->integer('bag')->nullable();
+            $table->string('photo')->nullable();
             $table->integer('phone');
             $table->string('password');
             $table->rememberToken();

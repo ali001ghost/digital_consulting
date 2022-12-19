@@ -34,6 +34,7 @@ return array(
     'App\\Models\\Experince' => $baseDir . '/app/Models/Experince.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Models\\UserDate' => $baseDir . '/app/Models/UserDate.php',
+    'App\\Models\\auth' => $baseDir . '/app/Models/auth.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
     'App\\Providers\\AuthServiceProvider' => $baseDir . '/app/Providers/AuthServiceProvider.php',
     'App\\Providers\\BroadcastServiceProvider' => $baseDir . '/app/Providers/BroadcastServiceProvider.php',

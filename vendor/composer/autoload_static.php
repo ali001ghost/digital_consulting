@@ -607,6 +607,7 @@ class ComposerStaticInit008b8ee1420efa685c0d72bf619ba7ea
         'App\\Models\\Experince' => __DIR__ . '/../..' . '/app/Models/Experince.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Models\\UserDate' => __DIR__ . '/../..' . '/app/Models/UserDate.php',
+        'App\\Models\\auth' => __DIR__ . '/../..' . '/app/Models/auth.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',

@@ -15,11 +15,11 @@ use Illuminate\Validation\Validator;
 class AuthController extends Controller
 {
     public function register(Request $request){
-        $request->validate(
+       $filds= $request->validate(
             [
                 'name'=>['required','string','max:55'],
                 'phone'=>['required','string','unique:users'],
-                'role'=>['required','in:costumer,expert'],
+                'role'=>['required','in:costumer,Expert'],
                 'password'=>['required','confirmed' ]
             ]
         );
@@ -37,12 +37,14 @@ class AuthController extends Controller
         }
 
         $token=$user->createToken('authToken')->accessToken;
+       // return auth()->user()->createToken('authToken')->accesstoken;
         $user['remember_token']=$token;
         return response()->json([
         "message"=>"register created successfully",
         "token"=>$token,
         "user"=>$user
          ],200);
+
     }
 
 
@@ -68,6 +70,8 @@ class AuthController extends Controller
     {
         $user= Auth::user()->token();
         $user->revoke();
+        // 'user_id' => Auth::user()->id();
+
         return response()->json([
             'message' => 'successfully logged out'],200);
 

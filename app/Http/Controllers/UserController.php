@@ -3,20 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use GrahamCampbell\ResultType\Result;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
-    public function store(Request $request)
+    public function updateWallet(Request $request)
     {
-        $result = User::query()->create([
-            'role' => $request->role,
-            'name' => $request->name,
-            'bag' => $request->bag,
-            'photo' => $request->photo,
-            'phone' => $request->phone,
-            'address_id' => $request->address_id,
-            'password' => $request->password,
- ]);
-        return 1;   }
+        $result = User::query()->where('id',Auth::user()->id)->update(
+            [
+            //   'user_id' => Auth::user()->id
+
+            'bag' => $request -> bag
+            ]
+        );
+
+    }
 }
